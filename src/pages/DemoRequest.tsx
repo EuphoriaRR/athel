@@ -96,11 +96,10 @@ const DemoRequest = () => {
   };
 
   const benefits = [
-    "Complete AI solution walkthrough",
-    "Personalized consultation",
-    "Custom implementation roadmap",
-    "Live Q&A session",
-    "No commitment required"
+    "Panduan lengkap solusi AI",
+    "Konsultasi yang dipersonalisasi",
+    "Roadmap implementasi khusus",
+    "Sesi tanya jawab langsung",
   ];
 
   return (
@@ -113,7 +112,7 @@ const DemoRequest = () => {
           className="text-cyan-400 hover:text-cyan-300 mb-8 animate-fade-in"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Home
+          Kembali ke Beranda
         </Button>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
@@ -122,11 +121,11 @@ const DemoRequest = () => {
             <div className="space-y-8">
               <div className="animate-slide-in-left">
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-cyan-400 bg-clip-text text-transparent">
-                  Get Your Free Demo
+                  Dapatkan Demo Gratis Anda
                 </h1>
                 <p className="text-xl text-gray-300 mb-8">
-                  Experience the power of AI-driven solutions tailored for your business. 
-                  Book your personalized demo today and discover how we can transform your operations.
+                  Rasakan kekuatan solusi berbasis AI yang disesuaikan untuk bisnis Anda. 
+                  Pesan demo personal Anda hari ini dan temukan bagaimana kami dapat mentransformasi operasi Anda.
                 </p>
               </div>
 
@@ -135,18 +134,17 @@ const DemoRequest = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center text-cyan-400">
                     <Clock className="w-6 h-6 mr-3" />
-                    7-Day Free Demo
+                    Demo Gratis 7 Hari
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div className="flex items-center text-green-400">
                       <CheckCircle className="w-5 h-5 mr-2" />
-                      <span className="font-semibold">100% Free of Charge</span>
+                      <span className="font-semibold">100% Gratis Tanpa Biaya</span>
                     </div>
                     <p className="text-black">
-                      Get full access to our AI solutions for 7 days. No hidden fees, 
-                      no credit card required, no strings attached.
+                      Dapatkan akses lengkap ke solusi AI kami selama 7 hari. Gratis!
                     </p>
                   </div>
                 </CardContent>
@@ -154,7 +152,7 @@ const DemoRequest = () => {
 
               {/* Benefits */}
               <div className="animate-fade-in delay-500">
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">What You'll Get:</h3>
+                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Yang Akan Anda Dapatkan:</h3>
                 <div className="space-y-3">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center animate-slide-in-left" style={{ animationDelay: `${600 + index * 100}ms` }}>
@@ -168,7 +166,7 @@ const DemoRequest = () => {
               {/* Contact Info */}
               <Card className="bg-slate-800/50 border-slate-700 animate-fade-in delay-1000">
                 <CardContent className="p-6">
-                  <h4 className="text-lg font-semibold mb-4 text-white">Need Help?</h4>
+                  <h4 className="text-lg font-semibold mb-4 text-white">Butuh Bantuan?</h4>
                   <div className="space-y-2">
                     <div className="flex items-center text-gray-300">
                       <Phone className="w-4 h-4 mr-2 text-cyan-400" />
@@ -189,10 +187,10 @@ const DemoRequest = () => {
             <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm animate-slide-in-right">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-center text-white">
-                  Request Your Demo
+                  Ajukan Permintaan Demo Anda
                 </CardTitle>
                 <p className="text-center text-gray-400">
-                  Fill out the form below and we'll get back to you within 24 hours
+                  Isi formulir di bawah ini dan kami akan menghubungi Anda dalam 24 jam
                 </p>
               </CardHeader>
               <CardContent>
@@ -200,13 +198,13 @@ const DemoRequest = () => {
                   <div className="space-y-2">
                     <Label htmlFor="fullName" className="text-white flex items-center">
                       <User className="w-4 h-4 mr-2 text-cyan-400" />
-                      Full Name *
+                      Nama Lengkap *
                     </Label>
                     <Input
                       id="fullName"
                       name="fullName"
                       type="text"
-                      placeholder="Enter your full name"
+                      placeholder="Masukkan nama lengkap Anda"
                       value={formData.fullName}
                       onChange={handleInputChange}
                       required
@@ -217,13 +215,13 @@ const DemoRequest = () => {
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-white flex items-center">
                       <Mail className="w-4 h-4 mr-2 text-cyan-400" />
-                      Email Address *
+                      Alamat Email *
                     </Label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="Enter your email address"
+                      placeholder="Masukkan alamat email Anda"
                       value={formData.email}
                       onChange={handleInputChange}
                       required
@@ -234,13 +232,13 @@ const DemoRequest = () => {
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="text-white flex items-center">
                       <Phone className="w-4 h-4 mr-2 text-cyan-400" />
-                      Phone Number *
+                      Nomor Telepon *
                     </Label>
                     <Input
                       id="phone"
                       name="phone"
                       type="tel"
-                      placeholder="Enter your phone number"
+                      placeholder="Masukkan nomor telepon Anda"
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
@@ -251,13 +249,13 @@ const DemoRequest = () => {
                   <div className="space-y-2">
                     <Label htmlFor="company" className="text-white flex items-center">
                       <Building className="w-4 h-4 mr-2 text-cyan-400" />
-                      Company Name
+                      Nama Perusahaan
                     </Label>
                     <Input
                       id="company"
                       name="company"
                       type="text"
-                      placeholder="Enter your company name"
+                      placeholder="Masukkan nama perusahaan Anda"
                       value={formData.company}
                       onChange={handleInputChange}
                       className="bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400 focus:ring-cyan-400 focus:border-cyan-400"
@@ -266,12 +264,12 @@ const DemoRequest = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="message" className="text-white">
-                      Additional Message (Optional)
+                      Pesan Tambahan (Opsional)
                     </Label>
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Tell us about your specific needs or questions..."
+                      placeholder="Ceritakan kepada kami tentang kebutuhan spesifik atau pertanyaan Anda..."
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={4}
@@ -290,12 +288,12 @@ const DemoRequest = () => {
                         Mengirim...
                       </div>
                     ) : (
-                      'Request Free Demo'
+                      'Ajukan Demo Gratis'
                     )}
                   </Button>
 
                   <p className="text-sm text-gray-400 text-center">
-                    By submitting this form, you agree to our privacy policy and terms of service.
+                    Dengan mengirimkan formulir ini, Anda menyetujui kebijakan privasi dan ketentuan layanan kami.
                   </p>
                 </form>
               </CardContent>
