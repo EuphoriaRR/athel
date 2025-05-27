@@ -44,11 +44,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection('hero')}>
+            <img src="/favicon.ico" alt=""/>
             {/*<div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">AI</span>
             </div>*/}
             <span className="text-xl font-bold bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
-              Captavox
+              Athel AI
             </span>
           </div>
 

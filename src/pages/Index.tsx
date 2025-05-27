@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { MessageCircle, Bot, Zap, Settings, Users, Star, ArrowUp, ChevronDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import AnimatedParticles from '@/components/AnimatedParticles';
 import TypewriterText from '@/components/TypewriterText';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -13,6 +14,7 @@ import StatCounter from '@/components/StatCounter';
 
 const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,9 +78,9 @@ const Index = () => {
   ];
 
   const stats = [
-    { number: 500, label: "Projects Completed", suffix: "+" },
+    { number: 50, label: "Projects Completed", suffix: "+" },
     { number: 99, label: "Client Satisfaction", suffix: "%" },
-    { number: 50, label: "AI Models Deployed", suffix: "+" },
+    { number: 25, label: "AI Models Deployed", suffix: "+" },
     { number: 24, label: "Support Availability", suffix: "/7" }
   ];
 
@@ -107,9 +109,10 @@ const Index = () => {
             <div className="animate-scale-in delay-2000">
               <Button 
                 size="lg" 
+                onClick={() => navigate('/demo-request')}
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 text-lg rounded-full transform transition-all hover:scale-110 hover:shadow-2xl animate-pulse-glow"
               >
-                Explore AI Solutions
+                Get Your FREE Demo
               </Button>
             </div>
           </div>
@@ -177,7 +180,7 @@ const Index = () => {
                     <Users className="w-16 h-16 mx-auto mb-4 text-cyan-400 animate-float delay-1000" />
                     <h3 className="text-2xl font-bold mb-4 text-white">Expert Team</h3>
                     <p className="text-gray-300">
-                      Dedicated AI specialists and developers with years of experience in delivering successful projects.
+                      Dedicated AI specialists and consultants with years of experience in delivering successful projects.
                     </p>
                   </CardContent>
                 </Card>
@@ -236,18 +239,12 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 text-lg rounded-full transform transition-all duration-300 hover:scale-110 hover:shadow-2xl"
-                >
-                  Get Free Demo
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 text-lg rounded-full transform transition-all duration-300 hover:scale-110"
-                >
-                  View Case Studies
-                </Button>
+                size="lg" 
+                onClick={() => navigate('/demo-request')}
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 text-lg rounded-full transform transition-all hover:scale-110 hover:shadow-2xl animate-pulse-glow"
+              >
+                Get Your FREE Demo
+              </Button>
               </div>
             </div>
           </div>
@@ -279,7 +276,6 @@ const Index = () => {
               <h4 className="text-lg font-semibold mb-4 text-white">Company</h4>
               <ul className="space-y-2 text-gray-400">
                 <li className="hover:text-cyan-400 transition-colors cursor-pointer">About Us</li>
-                <li className="hover:text-cyan-400 transition-colors cursor-pointer">Case Studies</li>
                 <li className="hover:text-cyan-400 transition-colors cursor-pointer">Blog</li>
                 <li className="hover:text-cyan-400 transition-colors cursor-pointer">Contact</li>
               </ul>
@@ -287,14 +283,14 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>hello@ai.solutions.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>San Francisco, CA</li>
+                <li>support@athel.ai</li>
+                <li>+62 851 1922 7248</li>
+                <li>Medan, Sumatera Utara</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 AI Solutions. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; 2025 AI Solutions. All rights reserved. | Privacy Policy | Terms of Service</p>
           </div>
         </div>
       </footer>
