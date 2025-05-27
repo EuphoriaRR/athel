@@ -35,13 +35,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
             </div>
           ))}
         </div>
-        
-        <Button 
-          className="w-full bg-gradient-to-r from-slate-700 to-slate-600 hover:from-blue-600 hover:to-cyan-600 text-white transition-all duration-300"
-          variant="outline"
-        >
-          Learn More
-        </Button>
       </CardContent>
     </Card>
   );
