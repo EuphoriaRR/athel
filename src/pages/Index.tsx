@@ -143,36 +143,89 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
       <Navigation />
       
-      {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4">
-        <AnimatedParticles />
-        <div className="container mx-auto text-center z-10 max-w-4xl">
-          <div className="animate-fade-in">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-cyan-400 bg-clip-text text-transparent">
-              <TypewriterText text="Revolusikan Bisnis Anda" />
-            </h1>
-            <div className="animate-slide-in-left delay-1000">
-              <h2 className="text-2xl md:text-3xl mb-8 text-blue-200">
-                dengan Inovasi Bertenaga AI
-              </h2>
-            </div>
-            <div className="animate-slide-in-right delay-1500">
-              <p className="text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
-                Transformasikan operasi Anda dengan solusi AI terdepan. Dari chatbot cerdas hingga sistem otomatisasi, kami membangun masa depan teknologi bisnis.
-              </p>
-            </div>
-            <div className="animate-scale-in delay-2000">
-              <Button 
-                size="lg" 
-                onClick={() => navigate('/demo-request')}
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 text-lg rounded-full transform transition-all hover:scale-110 hover:shadow-2xl animate-pulse-glow"
-              >
-                Get Your FREE Demo
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* Hero Section - Perbaikan untuk Mobile */}
+<section id="hero" className="relative min-h-screen flex items-center justify-center px-4 py-8">
+  <AnimatedParticles />
+  <div className="container mx-auto text-center z-10 max-w-6xl">
+    <div className="animate-fade-in space-y-6">
+      {/* Title dengan responsive sizing yang lebih baik */}
+      <h1 className="
+        text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl
+        font-bold 
+        mb-4 sm:mb-6
+        bg-gradient-to-r from-white via-blue-200 to-cyan-400 
+        bg-clip-text text-transparent
+        leading-tight
+        px-2
+      ">
+        <TypewriterText 
+          text="Revolusikan Bisnis Anda" 
+          className="
+            typewriter-wrapper
+            block w-full text-center
+            text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl
+            font-bold 
+            bg-gradient-to-r from-white via-blue-200 to-cyan-400 
+            bg-clip-text text-transparent
+            leading-tight
+          "
+        />
+      </h1>
+      
+      {/* Subtitle dengan spacing yang lebih baik */}
+      <div className="animate-slide-in-left delay-1000">
+        <h2 className="
+          text-lg sm:text-xl md:text-2xl lg:text-3xl
+          mb-6 sm:mb-8
+          text-blue-200
+          leading-relaxed
+          px-2
+          max-w-4xl mx-auto
+        ">
+          dengan Inovasi Bertenaga AI
+        </h2>
+      </div>
+      
+      {/* Description dengan responsive text */}
+      <div className="animate-slide-in-right delay-1500">
+        <p className="
+          text-base sm:text-lg md:text-xl
+          mb-8 sm:mb-10
+          text-gray-300 
+          max-w-2xl mx-auto
+          leading-relaxed
+          px-4
+        ">
+          Transformasikan operasi Anda dengan solusi AI terdepan. Dari chatbot cerdas hingga sistem otomatisasi, kami membangun masa depan teknologi bisnis.
+        </p>
+      </div>
+      
+      {/* Button dengan responsive sizing */}
+      <div className="animate-scale-in delay-2000">
+        <Button 
+          size="lg" 
+          onClick={() => navigate('/demo-request')}
+          className="
+            bg-gradient-to-r from-blue-600 to-cyan-600 
+            hover:from-blue-700 hover:to-cyan-700 
+            text-white 
+            px-6 sm:px-8 
+            py-3 sm:py-4 
+            text-base sm:text-lg
+            rounded-full 
+            transform transition-all 
+            hover:scale-110 hover:shadow-2xl 
+            animate-pulse-glow
+            w-auto
+            min-w-max
+          "
+        >
+          Get Your FREE Demo
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Services Section */}
       <ScrollReveal>

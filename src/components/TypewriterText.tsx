@@ -1,16 +1,17 @@
-
 import React, { useState, useEffect } from 'react';
 
 interface TypewriterTextProps {
   text: string;
   speed?: number;
   delay?: number;
+  className?: string;
 }
 
 const TypewriterText: React.FC<TypewriterTextProps> = ({ 
   text, 
   speed = 100, 
-  delay = 1000 
+  delay = 1000,
+  className = ""
 }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,12 +37,14 @@ const TypewriterText: React.FC<TypewriterTextProps> = ({
   }, []);
 
   return (
-    <span className="inline-block">
-      {displayText}
-      <span className={`inline-block w-1 bg-cyan-400 ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>
-        |
+    <div className={`w-full text-center ${className}`}>
+      <span className="typewriter-text-container">
+        {displayText}
+        <span className={`typewriter-cursor ${showCursor ? 'opacity-100' : 'opacity-0'}`}>
+          |
+        </span>
       </span>
-    </span>
+    </div>
   );
 };
 

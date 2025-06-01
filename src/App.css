@@ -40,3 +40,181 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Comprehensive responsive typography system */
+
+/* Typewriter component styles */
+.typewriter-text-container {
+  display: inline-block;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  text-align: center;
+  max-width: 100%;
+  line-height: 1.1;
+}
+
+.typewriter-cursor {
+  display: inline;
+  width: 2px;
+  background-color: #22d3ee;
+  margin-left: 3px;
+  transition: opacity 0.1s ease;
+  vertical-align: baseline;
+}
+
+/* Hero section responsive layout */
+.hero-section-responsive {
+  min-height: 100vh;
+  padding-top: 6rem; /* Space from navigation */
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive typography scales */
+.hero-title {
+  font-size: clamp(2rem, 8vw, 6rem);
+  line-height: 1.1;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 4vw, 2rem);
+  line-height: 1.2;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.5;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.hero-button {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 640px) {
+  .hero-section-responsive {
+    padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .typewriter-text-container {
+    word-break: break-word;
+    line-height: 1.05;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+  }
+  
+  .hero-description {
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-section-responsive {
+    padding-top: 5.5rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero-title {
+    font-size: clamp(3rem, 5vw, 5rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+  }
+}
+
+/* Large desktop and 4K adjustments */
+@media (min-width: 1441px) {
+  .hero-section-responsive {
+    padding-top: 7rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(4rem, 4vw, 6rem);
+    max-width: 1200px;
+    margin: 0 auto clamp(1.5rem, 2vw, 2.5rem) auto;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.75rem, 2vw, 2.25rem);
+    max-width: 800px;
+    margin: 0 auto clamp(2rem, 3vw, 2.5rem) auto;
+  }
+  
+  .hero-description {
+    font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+    max-width: 700px;
+    margin: 0 auto clamp(2.5rem, 4vw, 3rem) auto;
+  }
+}
+
+/* Ultra-wide screen adjustments */
+@media (min-width: 2560px) {
+  .hero-title {
+    font-size: 6rem;
+    max-width: 1400px;
+  }
+  
+  .hero-subtitle {
+    font-size: 2.25rem;
+    max-width: 900px;
+  }
+  
+  .hero-description {
+    font-size: 1.375rem;
+    max-width: 800px;
+  }
+}
+
+/* Landscape mobile adjustments */
+@media (max-width: 896px) and (orientation: landscape) and (max-height: 500px) {
+  .hero-section-responsive {
+    min-height: 100vh;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    margin-bottom: 1.5rem;
+  }
+}
