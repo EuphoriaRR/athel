@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: path.resolve(__dirname, "../dist"), // output build di root project
+    outDir: path.resolve(__dirname, "./dist"), // output build di root project
     emptyOutDir: true,
   },
 }));
